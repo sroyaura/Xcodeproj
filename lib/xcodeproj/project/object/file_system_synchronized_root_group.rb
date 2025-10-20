@@ -22,6 +22,10 @@ module Xcodeproj
         # @return [String] the path to a folder in the file system.
         #
         attribute :path, String
+        
+        # @return [String] The display name of the folder.
+        #
+        attribute :name, String
 
         # @return [String] Whether Xcode should use tabs for text alignment.
         #
@@ -65,6 +69,7 @@ module Xcodeproj
         attribute :explicit_folders, Array
 
         def display_name
+          return name if name
           return path if path
           super
         end

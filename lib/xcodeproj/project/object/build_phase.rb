@@ -45,6 +45,8 @@ module Xcodeproj
         # @note   This is apparently no longer used by Xcode.
         #
         attribute :comments, String
+        
+        attribute :name, String
 
         #--------------------------------------#
 
